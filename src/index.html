@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hello World!</title>
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Git emoji creator</title>
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <div class="row">
+    <div class="col">
+      <table class="table">
+        <thead class="bg-dark">
+          <tr>
+            <th scope="col">Commit type</th>
+            <th scope="col">Emoji</th>
+          </tr>
+        </thead>
+        <tbody id="table">
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col">
+      <div class="ccontainer sticky-top">
+        <textarea type="text" id="txtMessage" oninput="onMessageChange()"></textarea>
+        <div class="result my-2">
+          git commit -m "
+          <div id="currentEmojiView" class="emoji"></div>
+          <div id="txtResult"></div>
+          "
+        </div>
+        <button class="btn btn-success my-2" onclick="onBtnCopy()">
+          Copy
+        </button>
+        <button class="btn btn-danger my-2 mx-2" onclick="onBtnClear()">
+          clear
+        </button>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+<script src="./view.js"></script>
+
 </html>
