@@ -58,12 +58,19 @@ const emojies = [
         let text = document.createElement("td");
         text.innerHTML = emoji.text;
 
+        // Text onclick function
+        text.onclick = () => {
+            const previusText = txtMessage.value;
+            txtMessage.value = (emoji.text + " :: " + previusText);
+        }
+
         let icon = document.createElement("td");
         icon.innerHTML = emoji.icon;
 
         tr.appendChild(text);
         tr.appendChild(icon);
 
+        // Emoji icon onclick function
         tr.onclick = () => {
             currentEmoji = emoji;
             currentEmojiView.innerHTML = emoji.icon;

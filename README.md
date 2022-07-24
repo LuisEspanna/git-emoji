@@ -15,3 +15,8 @@ npm install
 ```
 npm run make
 ```
+
+## Start project
+```
+npm start
+```
