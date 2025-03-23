@@ -9,7 +9,8 @@ body {
 
 /* ------------------------------- table -------------------------*/
 th, tr, td, textarea{
-  color: white;
+  background-color: rgb(46, 46, 46) !important;
+  color: white !important;
 }
 
 td{
@@ -22,6 +23,13 @@ tr:hover{
 
 tr:active{
   background-color: #1a1b1f;
+}
+
+.table-container{
+  border-radius: 7px;
+  overflow: hidden;
+  max-height: 40em;
+  padding: 0;
 }
 
 /* ------------------------------- container -------------------------*/
@@ -38,6 +46,7 @@ textarea{
   border: none;
   height: 100%;
   padding: 1em;
+  border-radius: 7px;
 }
 
 textarea:focus{
